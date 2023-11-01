@@ -19,17 +19,9 @@ public class AuthenticationController {
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
     ){
-        log.info("Registering");
         return ResponseEntity.ok(authenticationService.register(request));
     }
 
-    @GetMapping("/")
-    public String say(
-
-    ){
-        log.info("saying");
-        return "What";
-    }
     @PostMapping("login")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody LoginRequest request
